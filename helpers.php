@@ -1,20 +1,31 @@
 <?php
-function getBaseUrl()
-{
-    $scriptDir = dirname(realpath($_SERVER['SCRIPT_FILENAME']));
-    $scriptDir = explode('\\', $scriptDir);
-    $scriptDir = end($scriptDir);
+    class URL{
+        
+        protected $baseUrl;
+        protected $protocol = 'http://';
+        protected $separator = '/';
+        
+        function getBaseUrl()
+        {
+            if(is_null($this->baseUrl))
+            {
+                $scriptDir = dirname(realpath($_SERVER['SCRIPT_FILENAME']));
+                $scriptDir = explode('\\', $scriptDir);
+                $scriptDir = end($scriptDir);
 
-    $server_name = $_SERVER['SERVER_NAME'];
+                $server_name = $_SERVER['SERVER_NAME'];
 
-    $pageUrl = array();
-    $pageUrl[] = 'http:/';
-    $pageUrl[] = $server_name;
-    $pageUrl[] = $scriptDir;
-    $pageUrl = implode('/', $pageUrl);
+                $baseUrl = array();
+                $baseUrl[] = $this->protocol . $server_name;
+                $baseUrl[] = $scriptDir;
+                $baseUrl = implode($this->separator, $baseUrl);
 
-    $pageUrl .= '/';
-
-    return $pageUrl;
-}
+                $baseUrl .= $this->separator;
+                
+                $this->baseUrl = $baseUrl;
+            }
+            
+            return $this->baseUrl;
+        }
+    }
 ?>

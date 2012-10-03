@@ -6,8 +6,9 @@
     </head>
     <body>
         <?php
-            require_once 'baseUrl.php';
-            define('BASEURL', getBaseUrl());
+            require_once 'helpers.php';
+            $url = new URL;
+            define('BASEURL', $url->getBaseUrl());
             define('DOCROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
             
             switch(isset($_GET['type']) && $_GET['type']){
