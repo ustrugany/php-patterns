@@ -1,0 +1,1 @@
+Testowy projekt, ekperymenty ze wzorcami projektowymi
