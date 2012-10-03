@@ -1,1 +1,2 @@
-Testowy projekt, ekperymenty ze wzorcami projektowymi
+Testowy projekt, ekperymenty ze wzorcami projektowym.
+Wzorzec obserwator.
