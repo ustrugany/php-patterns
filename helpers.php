@@ -8,6 +8,10 @@
         protected $protocol = 'http://';
         protected $separator = '/';
         
+        /**
+         * Adres bazowy
+         * @return string 
+         */
         function getBaseUrl()
         {
             if(is_null($this->baseUrl))
