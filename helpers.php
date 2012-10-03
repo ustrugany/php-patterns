@@ -1,4 +1,7 @@
 <?php
+    /**
+     * Helper do URLi 
+     */
     class URL{
         
         protected $baseUrl;
