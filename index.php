@@ -14,10 +14,15 @@
             /**
              * Zaladowanie odpowiedniego przykladu z wzorcem 
              */
-            switch(isset($_GET['type']) && $_GET['type']){
-                case 'observer':
-                    require_once 'observer/init.php';
-                    break;
+            if(isset($_GET['type'])){
+                switch($_GET['type']){
+                    case 'observer':
+                        require_once 'observer/init.php';
+                        break;
+                    case 'strategy':
+                        require_once 'strategy/init.php';
+                        break;
+                }
             }
         ?>
     </body>
