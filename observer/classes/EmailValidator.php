@@ -10,9 +10,9 @@
  *
  * @author = "piter";
  */
-require_once DOCROOT . 'observer/interfaces/iObservable.php';
+require_once DOCROOT . 'observer/interfaces/ObservableInterface.php';
 
-class EmailValidator implements IObservable{
+class EmailValidator implements ObservableInterface{
     
     const EVENT_EMAIL_VALID = 1;
     const EVENT_EMAIL_INVALID = 2;
@@ -49,7 +49,7 @@ class EmailValidator implements IObservable{
         }
     }
     
-    public function addObserver(IObserver $observer, $eventType)
+    public function addObserver(ObserverInterface $observer, $eventType)
     {
         $this->observers[$eventType][] = $observer;
     }

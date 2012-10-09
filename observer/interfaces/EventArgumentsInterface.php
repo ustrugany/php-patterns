@@ -1,5 +1,5 @@
 <?php
-    interface IEventArguments{
+    interface EventArgumentsInterface{
         public function getEventType();
         
         public function getEventArguments();

@@ -10,9 +10,9 @@
  *
  * @author = "piter";
  */
-require_once DOCROOT . 'observer/interfaces/iEventArguments.php';
+require_once DOCROOT . 'observer/interfaces/EventArgumentsInterface.php';
 
-class EventArguments implements IEventArguments{
+class EventArguments implements EventArgumentsInterface{
     
     protected $eventType;
     protected $eventArguments = array();

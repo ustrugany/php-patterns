@@ -12,13 +12,13 @@
  */
 require_once DOCROOT . 'observer/interfaces/ObserverInterface.php';
 
-class ErrorLogger implements ObserverInterface{
+class SuccessLogger implements ObserverInterface{
     
     public function notify(ObservableInterface $observable, EventArgumentsInterface $eventArguments)
     {
-        if(($eventArguments->getEventType() == EmailValidator::EVENT_EMAIL_INVALID) && 
+        if(($eventArguments->getEventType() == EmailValidator::EVENT_EMAIL_VALID) && 
                 ($observable instanceof EmailValidator)){
-            echo sprintf("Email address %s is invalid <br />", $observable->getEmailAddress());
+            echo sprintf("Email address %s is valid <br />", $observable->getEmailAddress());
         }
     }
 }
