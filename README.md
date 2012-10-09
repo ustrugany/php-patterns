@@ -1,2 +1,8 @@
 Testowy projekt, ekperymenty ze wzorcami projektowym.
-1) Wzorzec obserwator.
+==============
+- Wzorce
+	- Obserwator
+	- Adapter
+	- Strategia
+	- Dekorator
+	- Kompozyt
