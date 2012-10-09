@@ -16,6 +16,12 @@
      * na kazda ceche i klas dekoratorow komponowac pozadane 
      * obiekty.
      * 
+     * Komentarz:
+     * "Main benefit of decorator is that it affect only individual object 
+     * and not all object which itself a big control and flexibility 
+     * inheritance doesn't offer. See here for another example of 
+     * decorator pattern in Java."
+     * 
      * Elmenty wzorca:
      * - interfejs Komponent
      * - klasa Konkretnego Komponentu

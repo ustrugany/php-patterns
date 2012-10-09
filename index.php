@@ -22,6 +22,15 @@
                     case 'strategy':
                         require_once 'strategy/init.php';
                         break;
+                    case 'adapter':
+                        require_once 'adapter/init.php';
+                        break;
+                    case 'decorator':
+                        require_once 'decorator/init.php';
+                        break;
+                    case 'composite':
+                        require_once 'composite/init.php';
+                        break;
                 }
             }
         ?>

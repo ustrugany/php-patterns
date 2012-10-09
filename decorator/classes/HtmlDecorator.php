@@ -22,7 +22,8 @@ abstract class HtmlDecorator implements HtmlElement {
     /**
      * Domyslnie wszystkie operacje sa delegowane.
      * Nie zachodza zadne modyfikacje.
-     * Konkretni Dekoratorzy beda przeciazac ta metode.
+     * Konkretni Dekoratorzy beda przeciazac metody, 
+     * którymi beda zaintersowani.
      * @return type 
      */
     public function getName()
