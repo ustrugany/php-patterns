@@ -1,8 +1,8 @@
 <?php
-    /**
-     * Helper do URLi 
-     */
-    class URL{
+    
+    namespace Tools\Helper;
+
+    class Url{
         
         protected $baseUrl;
         protected $protocol = 'http://';
